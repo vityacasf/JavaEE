@@ -17,15 +17,12 @@ public class HelloServlet extends HttpServlet {
         try(PrintWriter writer = resp.getWriter()){
             writer.write("<h2>" + a + "</h2>");
             writer.write("<div>");
-            writer.write(req.getPathInfo());
-            writer.write("<br>");
             writer.write(req.getMethod());
             writer.write("<br>");
             writer.write(req.getLocalAddr());
             writer.write("<br>");
-            writer.write(req.getRequestedSessionId());
-            writer.write("<br>");
             writer.write("</div>");
+            System.out.println(req.getRequestedSessionId());
         }
     }
 
