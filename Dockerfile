@@ -1,7 +1,5 @@
 FROM maven:3.8.6-amazoncorretto-17 AS builder
 
-ARG HELLO
-ENV HELLO=${HELLO}
 ADD ./pom.xml pom.xml
 RUN mvn dependency:resolve
 
