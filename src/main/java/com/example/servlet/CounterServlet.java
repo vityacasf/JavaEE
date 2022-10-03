@@ -8,7 +8,7 @@ import java.io.IOException;
 import java.io.PrintWriter;
 import java.util.concurrent.atomic.AtomicInteger;
 
-public class MagnifyingServlet extends HttpServlet {
+public class CounterServlet extends HttpServlet {
     AtomicInteger counter;
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws IOException {
@@ -31,6 +31,6 @@ public class MagnifyingServlet extends HttpServlet {
 
     @Override
     public void init() throws ServletException {
-        counter = new AtomicInteger(0);
+        counter = new AtomicInteger();
     }
 }
